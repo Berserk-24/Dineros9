@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <title>Demo Node + Express</title>
@@ -11,6 +12,7 @@
   <!-- Tu hoja de estilos -->
   <link href="style.css" rel="stylesheet">
 </head>
+
 <body class="bg-light">
 
   <!-- Navbar -->
@@ -37,9 +39,10 @@
             </p>
 
             <div class="btn-group mb-3 flex-wrap" role="group" aria-label="Botones de prueba">
-              <button id="btnPing"    class="btn btn-primary">Probar <code>/ping</code></button>
+              <button id="btnPing" class="btn btn-primary">Probar <code>/ping</code></button>
               <button id="btnMensaje" class="btn btn-success">Obtener <code>/mensaje</code></button>
-              <button id="btnLocal"   class="btn btn-outline-secondary" title="Cambiar a modo LOCAL y responder de inmediato">
+              <button id="btnLocal" class="btn btn-outline-secondary"
+                title="Cambiar a modo LOCAL y responder de inmediato">
                 Usar respuesta local
               </button>
               <button id="btnNuevaVentana" class="btn btn-dark">
@@ -52,6 +55,20 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Panel de acciones extra -->
+      <div class="btn-group mb-3 flex-wrap" role="group" aria-label="Opciones extra">
+        <button id="btnToggle" class="btn btn-outline-primary">Cambiar a BACKEND</button>
+        <button id="btnSimularError" class="btn btn-outline-danger">Simular error</button>
+        <button id="btnCopy" class="btn btn-outline-secondary">Copiar respuesta</button>
+        <button id="btnAutoPing" class="btn btn-outline-warning">Auto-Ping (ON/OFF)</button>
+      </div>
+
+      <!-- Historial -->
+      <div class="mt-3">
+        <h6>Historial de respuestas</h6>
+        <ul id="historial" class="list-group small"></ul>
       </div>
 
       <!-- Panel de depuración -->
@@ -72,5 +89,5 @@
   <!-- Tu script de frontend -->
   <script src="main.js" defer></script>
 </body>
-</html>
 
+</html>
